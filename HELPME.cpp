@@ -4,10 +4,10 @@
 #include<string.h>
 using namespace std;
 
-void Additem();
-void Delitem();
-void Allitem();
-void Search_Information();
+void addItem();
+void delItem();
+void allItem();
+void searchInformation();
 
 int main()
 
@@ -24,20 +24,20 @@ int main()
         cin.get();//读取回车键
         switch (Option)
         {
-        case 1:Additem(); break;
+        case 1:addItem(); break;
 
-        case 2:Delitem(); break;
+        case 2:delItem(); break;
 
-        case 3:Allitem(); break;
+        case 3:allItem(); break;
 
-        case 4:Search_Information(); break;
+        case 4:search_Information(); break;
         default:cout << "您的输入不符合规范，请重新尝试。" << endl;
 
         }
     }
 }
 
-void Additem()
+void addItem()
 {
     string goods;
     string name;
@@ -66,7 +66,7 @@ void Additem()
     return;
 }
 
-void Delitem()
+void delItem()
 {
     cout << "请输入您想删除的物品:\n";
     bool find = false;
@@ -130,7 +130,7 @@ void Delitem()
         file2.close();
     }
 }
-void Allitem()
+void allItem()
 {
     ifstream file1;
     file1.open("items.txt");
@@ -153,7 +153,7 @@ void Allitem()
         delete[]tmp;
     }
 }
-void Search_Information()
+void searchInformation()
 {
     cout << "请输入您想查询的物品：\n";
     string goods;
