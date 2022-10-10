@@ -1,4 +1,4 @@
-﻿#include<iostream>
+#include<iostream>
 #include<fstream>
 #include<string>
 #include<string.h>
@@ -30,7 +30,7 @@ int main()
 
         case 3:allItem(); break;
 
-        case 4:search_Information(); break;
+        case 4:searchInformation(); break;
         default:cout << "您的输入不符合规范，请重新尝试。" << endl;
 
         }
@@ -60,7 +60,7 @@ void addItem()
     file1 << phone << "\t";
     cout << "请输入您的名字：\n";
     getline(cin, name);
-    file1 << name <<"\t"<< "\n";
+    file1 << name << "\t" << "\n";
     file1.close();
     cout << "添加按任意键返回主界面\n";
     return;
@@ -99,7 +99,7 @@ void delItem()
         name_tmp = strtok_s(tmp, split, &next_token);
         if (name_tmp == del_item)
         {
-            cout << endl <<"已删除"<<endl;
+            cout << endl << "已删除" << endl;
             find = true;
         }
         else
@@ -111,7 +111,7 @@ void delItem()
 
     if (!find)
     {
-        cout << "未找到物品"<<endl;
+        cout << "未找到物品" << endl;
         file1.close();//关闭流
         file2.close();
     }
@@ -152,6 +152,7 @@ void allItem()
         cout << list_item << "\t";
         delete[]tmp;
     }
+    cout << endl;
 }
 void searchInformation()
 {
@@ -165,7 +166,7 @@ void searchInformation()
     char* tmp;
     char* owner;
     char* phone;
-    bool find=false;
+    bool find = false;
     int len = 0;
     const char* split = "\t";//切割符号
     while (getline(file1, line))
@@ -187,18 +188,18 @@ void searchInformation()
             cout << phone << endl;
             cout << "联系方式是：\n";
             phone = strtok_s(NULL, split, &next_token);
-            cout << phone<<endl ;
+            cout << phone << endl;
             cout << "捐献者称呼是：\n";
             phone = strtok_s(NULL, split, &next_token);
-            cout << phone<<endl;
+            cout << phone << endl;
         }
-        
+
         delete[]tmp;
     }
 
     if (!find)
     {
-        cout << "未找到物品"<<endl;
+        cout << "未找到物品" << endl;
         file1.close();//关闭流
     }
     else
