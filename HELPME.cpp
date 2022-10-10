@@ -10,7 +10,6 @@ void allItem();
 void searchInformation();
 
 int main()
-
 {
     int Option;
     while (true)
