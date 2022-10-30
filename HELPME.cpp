@@ -36,6 +36,7 @@ int main()
     }
 }
 
+//添加物品
 void addItem()
 {
     string goods;
@@ -65,6 +66,7 @@ void addItem()
     return;
 }
 
+//删除物品
 void delItem()
 {
     cout << "请输入您想删除的物品:\n";
@@ -129,6 +131,8 @@ void delItem()
         file2.close();
     }
 }
+
+//显示物品信息
 void allItem()
 {
     ifstream file1;
@@ -153,6 +157,8 @@ void allItem()
     }
     cout << endl;
 }
+
+//查找物品信息
 void searchInformation()
 {
     cout << "请输入您想查询的物品：\n";
