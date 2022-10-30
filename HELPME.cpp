@@ -8,6 +8,8 @@ void addItem();
 void delItem();
 void allItem();
 void searchInformation();
+//主程序实现物品互换
+//作者：Sun
 
 int main()
 {
